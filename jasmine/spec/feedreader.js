@@ -61,11 +61,15 @@ $(function() {
          * the CSS to determine how we're performing the
          * hiding/showing of the menu element.
          */
-        it('menu is hidden', function(){
+        it('menu toggles', function(){
             //select the body element
             const body = document.querySelector('body');
+            //select the menu icon
+            const menu = document.querySelector('.menu-icon-link');
+            //to test for the open menu, use click() function
+            menu.click();
             //checking for the menu-hidden class in the class list
-            expect(body.classList.contains('menu-hidden')).toBe(true);
+            expect(body.classList.contains('menu-hidden')).toBe(false);
         });
 
          /* TODO: Write a test that ensures the menu changes
