@@ -92,9 +92,9 @@ $(function() {
          */
         //using beforeEach to make sure there is at least one entry when loadFeed function completes
         beforeEach(function(done){
-            loadFeed(0);
+            loadFeed(0, done);
         });
-        if('entry is present when loadFeed is completed', function(){
+        it('entry is present when loadFeed is completed', function(){
             var checkEntry = $('.feed .entry').length;
             expect(checkEntry).toBeGreaterThan(0);
         });
