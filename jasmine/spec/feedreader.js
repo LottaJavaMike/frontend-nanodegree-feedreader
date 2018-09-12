@@ -117,7 +117,7 @@ $(function() {
             });
         });
         it('new feed loads with content', function(done){
-            loadFeed(2, function(){
+            loadFeed(1, function(){
                 newFeed = $('.feed').html();
                 expect(newFeed).not.toBe(initFeed);
                 done();
