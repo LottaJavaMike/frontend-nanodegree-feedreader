@@ -6,9 +6,9 @@ In this project we were given a web-based application that reads RSS feeds. We w
 ## How to get this project
 
 1. Download or clone this [repository] (https://github.com/LottaJavaMike/) and open in your favorite code editor 
-2. Run `node -v`on the terminal or command line. If nothing shows up or you get an error, [Install Node](https://nodejs.org/en/)
-3. Run `npm install -g http-server`
-4. Then run `http-server -o` in the project directory
+2. Create/edit test suites using the jasmine.js file in the 'jasmine/spec/feedreader.js' file
+3. Open the 'index.html' file in your favorite (ahem, Chrome) web browser.
+4. Then scroll to the bottom of the page to see the Jasmine test results section
 
 
 ## Project Resources
