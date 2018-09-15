@@ -102,26 +102,23 @@ $(function() {
 
     /* TODO: Write a new test suite named "New Feed Selection" */
     describe('New Feed Selection', function(){
+      // setup the  initFeed variable
+      var initFeed;
 
         /* TODO: Write a test that ensures when a new feed is loaded
          * by the loadFeed function that the content actually changes.
          * Remember, loadFeed() is asynchronous.
          */
-        //going to create an initFeed and newFeed then compare them to check for content change
-        let initFeed;
-        let newFeed;
+        //load up the initFeed which should be empty and then compare them when the feed loads
         beforeEach(function(done){
             loadFeed(0, function(){
                 initFeed = $('.feed').html();
-                done();
+                loadFeed(1, done);
             });
         });
-        it('new feed loads with content', function(done){
-            loadFeed(1, function(){
-                newFeed = $('.feed').html();
-                expect(newFeed).not.toBe(initFeed);
-                done();
+
+        it('new feed loads with content', function(){
+            expect($('.feed').html()).not.toBe(initFeed);
             });
         });
-    });
 }());
